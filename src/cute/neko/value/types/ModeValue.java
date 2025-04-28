@@ -19,6 +19,10 @@ public class ModeValue extends Value<String> {
         this.modes = builder.modes;
     }
 
+    public static Builder create() {
+        return new Builder();
+    }
+
     public static class Builder extends Value.Builder<String, Builder> {
 
         private final List<String> modes = new ArrayList<>();

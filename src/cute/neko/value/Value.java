@@ -28,6 +28,10 @@ public abstract class Value<T> {
         return name;
     }
 
+    public void reset() {
+        current = value;
+    }
+
     public abstract static class Builder<T, B extends Builder<T, B>> {
         private String name;
         private T value;
